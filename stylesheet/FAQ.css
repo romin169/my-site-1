@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+body .app-link {
+    position: sticky;
+}
+
+body .app-link-text {
+    align-items: center;
+    background: #eff1f2;
+    border-bottom: 3px solid #a0138e;
+    letter-spacing: 1px;
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+    color: #000000;
+}
+
+div.app-lixnk-text {
+    display: none;
+    position: sticky;
+    top: 0;
+}
+
+li,
+a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.section-heading {
+    font-size: 23px;
+}
+
+#click {
+    display: none;
+}
+
+.fa-circle:before {
+    content: "\f111";
+    font-size: 11px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100vw;
+    border-bottom: 1px solid gray;
+}
+
+.nav__links {
+    list-style: none;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #0034c8;
+    height: 100vh;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+#click:not(:checked)~.nav__links {
+    left: -100%;
+}
+
+#click:checked~.nav__links {
+    left: 0%;
+}
+
+#click:checked~.menu-btn i:before {
+    content: "\f00d";
+    color: #f2f2f2;
+    position: fixed;
+    top: 10%;
+    left: 8%;
+}
+
+.fa-bars:before,
+.fa-navicon:before {
+    font-size: 40px;
+}
+
+.menu-btn:checked+.nav__links {
+    display: block;
+}
+
+.nav__links li {
+    margin-top: 13px;
+    position: relative;
+}
+
+.sub-links {
+    position: relative;
+    top: 25%;
+}
+
+.nav__links .name-text {
+    color: white;
+    font-size: 23px;
+    position: absolute;
+    right: 10%;
+    top: 4%;
+}
+
+.links {
+    display: flex;
+    text-align: justify;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 100vw;
+    position: relative;
+    top: 30%;
+}
+
+.links-list p {
+    display: block;
+    color: white;
+}
+
+.links-list {
+    position: relative;
+    left: 2%;
+    width: 33.33%;
+}
+
+.links-list li {
+    list-style-type: none;
+}
+
+.links li a {
+    transition: all 0.3s ease 0s;
+    color: #f2f2f2;
+    font-size: 30px;
+}
+
+.nav__links li a:hover,
+.active {
+    color: #0088A9;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.menu-btn {
+    color: black;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+/* -------------  Container  ----------- */
+
+.contact-info {
+    color: white;
+    width: 33.33%;
+}
+
+.contact-links {
+    margin: 0 auto;
+}
+
+.contact-links .mail-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact-info ul li {
+    list-style-type: none;
+}
+
+/* -------------  Container  ----------- */
+.container {
+    display: flex;
+    text-align: center;
+}
+
+.grid-items {
+    line-height: 1.5;
+}
+
+.container-items {
+    margin: 10px;
+    border-right: 1px solid gray;
+    padding: 0 15px 0 0;
+}
+
+.grid-items p {
+    font-size: 14px;
+    text-align: end;
+}
+
+.grid-items a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.container-text {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.own-title .name-title {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+p .sub-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* ------------- Main Title ---------- */
+
+.main-heading{
+    /* background-color: #0088A9; */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-heading h1{
+    font-size: 69px;
+}
+
+
+/* --------------------  Featured Section ----------------- */
+.featured-title {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-title .featured-heading {
+    color: #000000;
+    font-size: 23px;
+}
+
+.featured-main-container {
+    display: grid;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+    gap: 30px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+}
+
+.featured-container {
+    margin-bottom: 100px;
+    width: 587px;
+}
+
+.featured-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featured-bottom-border {
+    border-bottom: 1px solid gray;
+    padding: 25px 0;
+}
+
+.featured-sub-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.featured-img {
+    position: relative;
+}
+
+.featured-rent-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #0A182E;
+}
+
+.featured-rent-link a {
+    display: inline-block;
+    color: #f2f2f2;
+    background-color: #0A182E;
+    padding: 24px 60px;
+}
+
+.featured-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-info-title {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.featured-info-details {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+
+/* --------------------  footer -------------------------- */
+
+footer {
+    background-color: #0A182E;
+}
+
+.footerr {
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    width: 95%;
+    margin: auto;
+}
+
+.fc-form {
+    flex-grow: 1;
+}
+
+.fc-heading, .fc-copyrights{
+    width: 348px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fc-address {
+    flex-grow: 1;
+    line-height: 2.5;
+}
+
+.fc-address-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fc-quick-links {
+    flex-grow: 1;
+}
+
+.fc-iteam {
+    width: 100%;
+}
+
+form {
+    width: 348px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fc-width {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: auto;
+}
+
+input[type=text],
+textarea {
+    background-color: transparent;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    resize: none;
+    width: 100%;
+}
+
+button {
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+input[type=text]:focus,
+textarea {
+    outline: none;
+}
+
+.fc-address-iteam ul {
+    display: flex;
+    gap: 0 20px;
+}
+
+.fc-address-iteam ul li {
+    list-style: none;
+}
+
+.fc-address-iteam ul li a {
+    color: #f2f2f2;
+}
+
+.fc-address-iteam ul li a:hover {
+    color: #0088A9;
+}
+
+.fc-copyrights-two {
+    display: none;
+}
+
+.fc-quicklinks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.fc-quicklinks ul {
+    line-height: 2;
+}
+
+.fc-quicklinks ul li {
+    list-style: none;
+}
+
+.fc-quicklinks ul li a {
+    color: #f2f2f2;
+}
+
+.fc-address-iteam p a {
+    color: #f2f2f2;
+}
+
+#mail-quicklink a:hover {
+    color: #0088A9;
+}
+
+.fc-quicklink-iteam li a:hover {
+    color: #0088A9;
+}
+
+@media screen and (max-width: 768px) {
+
+    button{
+        font-size: 23px;
+    }
+
+    footer{
+        gap: 100px;        
+        background-color: #0A182E;
+        color: #f2f2f2;
+    }
+
+    .footerr {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .fc-quick-links {
+        display: none;
+    }
+
+    .cr-testimonial{
+        margin-top: 30px;
+    }
+
+    .content-cr p{
+        
+        width: 95%;
+    }
+
+    .fc-copyrights-one{
+        display: none;
+    }
+
+    .fc-copyrights-two{
+        display: block;
+        position: relative;
+        bottom: 0;
+    }
+}
+
+
+/* ---------------------                    ------------------- */
+/* ---------------------  Media Query 768px ------------------- */
+/* ---------------------                    ------------------- */
+
+@media (max-width: 768px) {
+
+    body .app-link-text {
+        align-items: center;
+        background: #eff1f2;
+        border-bottom: 3px solid #a0138e;
+        letter-spacing: 1px;
+        display: flex;
+        height: 38px;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        width: 100%;
+        color: #000000;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 30px 0;
+        height: 190px;
+    }
+
+    .nav__links .name-text{
+        display: none;
+    }
+
+    .container-items {
+        border-right: none;
+        margin: 0;
+    }
+
+    .nav__links {
+        height: 100vh;
+    }
+
+    .links {
+        /* top: 0;
+        left: 30%; */
+        top: 75px;
+    left: 30%;
+    display: block;
+    }
+
+    .links p {
+        display: none;
+    }
+
+    .links-list {
+        width: 100vw;
+        /* height: 100vh; */
+        /* background-color: blue; */
+    }
+
+    .nav__links li {
+        display: block;
+        margin-top: 40px;
+        
+    }
+
+    .menu-btn {
+        align-self: flex-end;
+        margin-right: 24px;
+    }
+
+    .fas {
+        font-size: 44px;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+    .contact-links {
+        display: none;
+    }
+
+    #click:checked~.menu-btn i:before {
+        background: white;
+        color: black;
+        padding: 13px;
+        top: 8%;
+        left: 85%;
+    }
+
+    #click:checked~.nav__links {
+        display: block;
+        transition: all 1s ease;
+        /* height: 80vh; */
+        /* background: aqua; */
+    }
+
+    .side-bar-link {
+        display: none;
+    }
+
+    .img-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    div img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+
+    .img-div img {
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    .landing-container {
+        display: block;
+    }
+
+    div .heading-h1 .landing-title {
+        font-size: 31px;
+        margin-top: 25px;
+        line-height: 1.3;
+    }
+
+    .landing-items .heading-h1 {
+        position: absolute;
+        top: 0;
+        left: auto;
+    }
+
+    div .heading-h1 .landing-subtitle {
+        font-size: 19px;
+        margin-top: 10px;
+    }
+
+    .fa-circle:before {
+        content: "\f111";
+        font-size: 11px;
+    }
+
+    .container-circle {
+        position: relative;
+        top: -2px;
+    }
+
+    /* ----------------   Featured Section  --------------- */
+    .featured-title {
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .featured-main-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .featured-container {
+        margin-bottom: 100px;
+    }
+
+    .featured-items {
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .featured-bottom-border {
+        border-bottom: 1px solid gray;
+        padding: 25px 0;
+    }
+
+    .featured-sub-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .featured-img {
+        position: relative;
+    }
+
+    .featured-rent-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #0A182E;
+    }
+
+    .featured-rent-link a {
+        display: inline-block;
+        color: #f2f2f2;
+        font-size: 19px;
+        background-color: #0A182E;
+        padding: 12px 30px;
+    }
+
+    .featured-info {
+        display: flex;
+        flex-direction: column;
+        gap: 12px 0;
+    }
+
+    .featured-info-title {
+        font-size: 14px;
+        font-weight: 100;
+    }
+
+    .featured-info-details {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    /* ---------------  MQ Agent Section ---------------  */
+    .agent-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agent-name h3 {
+        font-size: 30px;
+    }
+
+    .agent-items {
+        border: 1px solid gray;
+        width: 100%;
+        height: 300px;
+    }
+
+    .agent-grid {
+        height: 280px;
+        gap: 20px
+    }
+
+    /* ---------- cr --------- */
+    .cr-section {
+        margin-top: 70px;
+    }
+
+    .cr-title {
+        height: 100px;
+    }
+
+    .content-cr p {
+        font-size: 19px;
+        /* width: 320px; */
+    }
+}
+
+/* --------------------    Media Query  375px   ----------- */
+
+@media (max-width: 375px) {
+
+    .container-text {
+        display: flex;
+    }
+
+    .container-items {
+        border-right: none;
+        padding: 0;
+    }
+
+    .links li a {
+        font-size: 20px;
+    }
+}
+
+/* -------------------    Media Query  360px   ----------------- */
+@media (max-width: 360px) {
+
+    .landing-container {
+        background-color: burlywood;
+    }
+
+    .container-items {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .fa-bars:before {
+        font-size: 30px;
+    }
+
+    .grid-items a {
+        font-size: 22px;
+    }
+
+    .links li a {
+        font-size: 20px;
+    }
+}
+
+/* ----------    Media Query  min-width: 768px   ----------- */
+@media screen and (min-width:768px) {
+
+    #click:checked~.nav__links {
+        display: block;
+        transition: all 1s ease;
+    }
+
+    .nav__links {
+        height: 100vh;
+    }
+}
+
+/* ------  Media Query  (min-width:768px) and (max-width:1100px)  ----------- */
+@media screen and (min-width:768px) and (max-width:1100px) {
+    #click:checked~.nav__links {
+        display: block;
+        transition: all 1s ease;
+        z-index: 1;
+        background-color: #f2f2f2;
+    }
+
+    .links {
+        background-color: #0034c8;
+        height: 51vh;
+        top: 0;
+    }
+
+    .contact-info {
+        position: relative;
+    }
+
+    .links-list,
+    .contact-info {
+        top: 30%
+    }
+
+    #click:checked~.menu-btn i:before {
+        top: 2%;
+    }
+
+    .nav__links .name-text {
+        color: white;
+        font-size: 23px;
+        position: absolute;
+        right: 10%;
+        top: 10%;
+    }
+
+    .img-div {
+        width: auto;
+        height: fit-content;
+    }
+
+    .img-div img {
+        height: 837px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+}
